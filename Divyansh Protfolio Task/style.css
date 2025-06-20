@@ -1,0 +1,206 @@
+:root {
+  --bg-color: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+  --accent-color: #6c63ff;
+  --text-color: #eaeaea;
+  --section-padding: 4rem 2rem;
+  --card-bg: #2c2c2e;
+  --nav-bg: #2c2c2eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background:
+    url("https://www.transparenttextures.com/patterns/pw-maze-white.png"),
+    linear-gradient(to bottom right, #2c3e50, #4ca1af);
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: auto;
+  color: var(--text-color);
+}
+
+
+
+
+header {
+  text-align: center;
+  padding: 2.5rem;
+  background: linear-gradient(90deg, #2c2c2e, #3e3e42);
+  border-bottom: 1px solid #3a3a3c;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #d1d1d6;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(90deg, #3b3b3f, #2c2c2e);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+}
+
+.nav-bar a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+  color: #a29bfe;
+}
+
+section {
+  padding: var(--section-padding);
+  background: linear-gradient(145deg, #1f1f21, #2a2a2d);
+  border-radius: 12px;
+  margin: 1rem;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #6c63ff80;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding-top: 1rem;
+  justify-content: center;
+}
+
+.skills li {
+  background: #3a3a3c;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid #505052;
+  transition: all 0.3s ease;
+  color: #f1f2f6;
+}
+
+.skills li:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #2c2c2e, #36363a);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 10px #00000033;
+}
+
+.resume h2 {
+  margin-bottom: 1.2rem;
+}
+
+.resume a {
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume a:hover {
+  opacity: 0.85;
+}
+
+.contact p {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #d1d1d6;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, #2c2c2e, #1c1c1e);
+  color: #a1a1a6;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in { animation: fadeIn 2s ease forwards; opacity: 0; }
+.fade-in-top { animation: fadeInTop 1.5s ease forwards; opacity: 0; }
+.fade-in-bottom { animation: fadeInBottom 1.5s ease forwards; opacity: 0; }
+.fade-in-up { animation: fadeInUp 1.5s ease forwards; opacity: 0; }
+.slide-in-left { animation: slideInLeft 1s ease forwards; opacity: 0; }
+.slide-in-right { animation: slideInRight 1s ease forwards; opacity: 0; }
+.zoom-in { animation: zoomIn 1.5s ease forwards; opacity: 0; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeInTop {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInBottom {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
